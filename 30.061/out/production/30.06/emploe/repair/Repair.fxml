@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="604.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emploe.repair.RepairController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="167.0" prefWidth="104.0" spacing="15.0">
+         <children>
+            <Label text="id" />
+            <Label layoutX="10.0" layoutY="10.0" text="date" />
+            <Label layoutX="10.0" layoutY="27.0" text="custumer" />
+            <Label layoutX="10.0" layoutY="10.0" text="master" />
+            <Label layoutX="10.0" layoutY="27.0" text="device" />
+            <Label layoutX="10.0" layoutY="44.0" text="material" />
+            <Label layoutX="10.0" layoutY="95.0" text="dop_info" />
+         </children></VBox>
+      <VBox layoutX="83.0" layoutY="13.0" prefHeight="143.0" prefWidth="226.0" spacing="6.0">
+         <children>
+            <TextField fx:id="tfid" />
+            <TextField fx:id="tfdate" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tfcustumer" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tfmaster" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tfdevice" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tfmaterial" layoutX="10.0" layoutY="60.0" />
+            <TextField fx:id="tfdop_info" layoutX="10.0" layoutY="135.0" />
+         </children>
+      </VBox>
+      <Button fx:id="btinsert" layoutX="14.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Insert">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btupdate" layoutX="92.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Update">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btdelete" layoutX="176.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Delete">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btexit" layoutX="257.0" layoutY="249.0" mnemonicParsing="false" text="exit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tvrepair" layoutX="328.0" layoutY="13.0" onMouseClicked="#handleMouseAction" prefHeight="302.0" prefWidth="672.0">
+        <columns>
+          <TableColumn fx:id="tcid" prefWidth="39.0" text="id" />
+          <TableColumn fx:id="tcdate" prefWidth="81.0" text="date" />
+            <TableColumn fx:id="tccustomer" prefWidth="90.0" text="custumer" />
+            <TableColumn fx:id="tcmaster" prefWidth="97.0" text="master" />
+            <TableColumn fx:id="tcdecice" prefWidth="106.0" text="device" />
+            <TableColumn fx:id="tcmaterial" prefWidth="107.0" text="material" />
+            <TableColumn fx:id="tcdop_in" prefWidth="145.0" text="dop_info" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

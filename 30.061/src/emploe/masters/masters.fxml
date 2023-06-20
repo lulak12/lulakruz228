@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="625.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emploe.masters.mastersController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="132.0" prefWidth="89.0" spacing="20.0">
+         <children>
+            <Label text="id_masters" />
+            <Label layoutX="10.0" layoutY="10.0" text="name_master" />
+            <Label layoutX="10.0" layoutY="27.0" text="surname_master" />
+            <Label layoutX="10.0" layoutY="44.0" text="position" />
+            <Label layoutX="10.0" layoutY="27.0" text="phone" />
+         </children>
+      </VBox>
+      <VBox layoutX="114.0" layoutY="14.0" prefHeight="149.0" prefWidth="198.0" spacing="11.0">
+         <children>
+            <TextField fx:id="tfid_mas" />
+            <TextField fx:id="tfname_mas" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tfsur_mas" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tfposit_mas" layoutX="10.0" layoutY="60.0" />
+            <TextField fx:id="tfphon_mas" layoutX="10.0" layoutY="60.0" />
+         </children>
+      </VBox>
+      <Button fx:id="btinsert" layoutX="14.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Insert">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btupdate" layoutX="90.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleButtonAction" text="update">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btdelete" layoutX="177.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleButtonAction" prefWidth="57.0" text="delete">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btexit" layoutX="260.0" layoutY="207.0" mnemonicParsing="false" text="exit">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tvmaster" layoutX="327.0" layoutY="14.0" onMouseClicked="#handleMouseAction" prefHeight="284.0" prefWidth="469.0">
+        <columns>
+          <TableColumn fx:id="tcidm" prefWidth="41.0" text="id" />
+          <TableColumn fx:id="tcnamem" prefWidth="90.0" text="name" />
+            <TableColumn fx:id="tcsurm" prefWidth="114.0" text="surname" />
+            <TableColumn fx:id="tcpositm" prefWidth="123.0" text="position" />
+            <TableColumn fx:id="tcphonem" prefWidth="98.0" text="phone" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

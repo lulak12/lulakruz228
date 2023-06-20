@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="612.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emploe.cuctumers.custumerController">
+   <children>
+      <VBox layoutX="38.0" layoutY="37.0" prefHeight="151.0" prefWidth="100.0" spacing="15.0">
+         <children>
+            <Label text="id" />
+            <Label text="name" />
+            <Label text="surname" />
+            <Label text="contacts" />
+            <Label text="sale" />
+         </children>
+      </VBox>
+      <VBox layoutX="138.0" layoutY="37.0" prefHeight="173.0" prefWidth="250.0" spacing="7.0">
+         <children>
+            <TextField fx:id="tf_id" />
+            <TextField fx:id="tf_name" />
+            <TextField fx:id="tf_surname" />
+            <TextField fx:id="tf_contacts" />
+            <TextField fx:id="tf_sale" />
+         </children>
+      </VBox>
+      <TableView fx:id="tv_custumer" layoutX="397.0" layoutY="37.0" onMouseClicked="#handleMouseAction" prefHeight="283.0" prefWidth="399.0">
+        <columns>
+          <TableColumn fx:id="coi_id" prefWidth="32.0" text="id" />
+          <TableColumn fx:id="coi_name" prefWidth="102.0" text="name" />
+            <TableColumn fx:id="coi_surname" prefWidth="105.0" text="surname" />
+            <TableColumn fx:id="coi_contacts" prefWidth="96.0" text="contacts" />
+            <TableColumn fx:id="coi_sale" prefWidth="63.0" text="sale" />
+        </columns>
+      </TableView>
+      <Button fx:id="bt_isert" layoutX="52.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleButtonAction" text="insert" />
+      <Button fx:id="bt_update" layoutX="177.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleButtonAction" text="update" />
+      <Button fx:id="bt_delete" layoutX="301.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleButtonAction" text="delete" />
+      <Button fx:id="bt_exit" layoutX="300.0" layoutY="294.0" mnemonicParsing="false" text="Выход!" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="562.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emploe.materials.materialsController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <Label text="id_materials" />
+            <Label layoutX="10.0" layoutY="10.0" text="title" />
+            <Label layoutX="10.0" layoutY="27.0" text="price" />
+            <Label layoutX="10.0" layoutY="44.0" text="tipe" />
+            <Label layoutX="10.0" layoutY="61.0" text="amount" />
+         </children>
+      </VBox>
+      <VBox layoutX="114.0" layoutY="14.0" prefHeight="145.0" prefWidth="235.0" spacing="11.0">
+         <children>
+            <TextField fx:id="tfidm" />
+            <TextField fx:id="tftitle" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tfprice" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tftipe" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tfamount" layoutX="10.0" layoutY="35.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvmaterials" layoutX="360.0" layoutY="14.0" prefHeight="295.0" prefWidth="474.0">
+        <columns>
+          <TableColumn fx:id="tcidm" prefWidth="45.0" text="id" />
+          <TableColumn fx:id="tctitle" prefWidth="118.0" text="title" />
+            <TableColumn fx:id="tcprice" prefWidth="109.0" text="price" />
+            <TableColumn fx:id="tctipe" prefWidth="91.0" text="tipe" />
+            <TableColumn fx:id="tcamount" prefWidth="106.0" text="amount" />
+        </columns>
+      </TableView>
+       <Button fx:id="btinsert" layoutX="14.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Insert">
+           <font>
+               <Font name="System Bold" size="13.0" />
+           </font>
+       </Button>
+       <Button fx:id="btupdate" layoutX="90.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleButtonAction" text="update">
+           <font>
+               <Font name="System Bold" size="13.0" />
+           </font>
+       </Button>
+       <Button fx:id="btdelete" layoutX="177.0" layoutY="207.0" mnemonicParsing="false" onAction="#handleButtonAction" prefWidth="57.0" text="delete">
+           <font>
+               <Font name="System Bold" size="13.0" />
+           </font>
+       </Button>
+       <Button fx:id="btexit" layoutX="260.0" layoutY="207.0" mnemonicParsing="false" text="exit">
+           <font>
+               <Font name="System Bold" size="13.0" />
+           </font>
+       </Button>
+   </children>
+</AnchorPane>
